@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love Story ❤️</title>
+
+<style>
+:root{
+  --pink:#ff4f81;
+  --pink2:#ff7eb3;
+  --white:#fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+  overflow-x:hidden;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:12px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  padding:8px 14px;
+  border-radius:30px;
+  background:rgba(255,255,255,.2);
+}
+
+section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:auto;
+  border:6px solid white;
+  box-shadow:0 0 30px rgba(255,255,255,.5);
+}
+
+.hero h1{
+  font-size:3rem;
+  margin:20px 0;
+}
+
+.hero p{
+  font-size:1.2rem;
+}
+
+.card{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:20px;
+  margin:20px 0;
+}
+
+.timeline-item{
+  margin:20px 0;
+  padding-left:15px;
+  border-left:4px solid white;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.reasons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+}
+
+.reason{
+  background:rgba(255,255,255,.15);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.timer{
+  font-size:1.5rem;
+  text-align:center;
+  font-weight:bold;
+}
+
+.btn{
+  border:none;
+  background:#ff1744;
+  color:white;
+  padding:14px 28px;
+  border-radius:50px;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+.proposal{
+  text-align:center;
+}
+
+.message{
+  margin-top:20px;
+  font-size:1.4rem;
+  font-weight:bold;
+}
+
+.floating-heart{
+  position:fixed;
+  bottom:-50px;
+  font-size:20px;
+  animation:float 8s linear forwards;
+  pointer-events:none;
+}
+
+@keyframes float{
+  from{
+    transform:translateY(0);
+    opacity:1;
+  }
+  to{
+    transform:translateY(-110vh);
+    opacity:0;
+  }
+}
+
+canvas{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9999;
+}
+
+.music-btn{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  z-index:1000;
+}
+
+@media(max-width:600px){
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .hero img{
+    width:180px;
+    height:180px;
+  }
+}
+</style>
+</head>
+<body>
+
+<canvas id="confetti"></canvas>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#story">Story</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#letter">Letter</a>
+  <a href="#reasons">Love</a>
+  <a href="#proposal">Proposal</a>
+</nav>
+
+<section class="hero" id="home">
+  <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800" alt="">
+  <h1>❤️ Our Love Story ❤️</h1>
+  <p>You are my favorite chapter in life.</p>
+</section>
+
+<section id="timer">
+  <div class="card">
+    <h2>⏳ Time Together May be within</h2>
+    <div class="timer" id="loveTimer"></div>
+  </div>
+</section>
+
+<section id="story">
+  <h2>💕 Our Journey</h2>
+
+  <div class="card timeline-item">
+    <h3>🌟 First Meeting 31st May 2026</h3>
+    <p>That evening everything changed.</p>
+  </div>
+
+  <div class="card timeline-item">
+    <h3>😊 First Conversation</h3>
+    <p>"நீ பேசியது ஒரு சில வார்த்தைகள் தான்; ஆனால் அவை இன்னும் என் காதுகளில் அல்ல, என் மனதிலே ஒலித்துக்கொண்டிருக்கின்றன." ❤️</p>
+  </div>
+
+  <div class="card timeline-item">
+    <h3>❤️ Falling in Love</h3>
+    <p>The moment my heart chose you.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>📸 Memories</h2>
+
+  <div class="gallery">
+    <img src="C:\Users\pc\Desktop\Ibu SAP Course\New folder\Chocolate.jpeg">
+    <img src="C:\Users\pc\Desktop\Ibu SAP Course\New folder\my letter.jpeg">
+    <img src="C:\Users\pc\Desktop\Ibu SAP Course\New folder\Sumai 1.jpeg">
+    <img src="C:\Users\pc\Desktop\Ibu SAP Course\New folder\Sumai 2.jpeg">
+  </div>
+</section>
+
+<section id="letter">
+  <div class="card">
+    <h2>💌 Love Letter</h2>
+    <br>
+    <p>
+            To My Future ❤️
+
+                என் அம்மா தான் முதலில் உன்னைப் பார்த்தார்கள்.
+
+                "அவங்க சிரிப்பு ரொம்ப அழகா இருக்கு,
+                 அதுல ஒரு தனி நிம்மதி இருக்கு..."
+                 என்று சொன்னார்கள்.
+
+                 ஆனால் அப்போது நான் அதை நம்பவில்லை,
+                 "அம்மா வழக்கம்போல கொஞ்சம் பில்ட்அப் பண்ணுறாங்க..."
+                 என்று நினைத்தேன்.
+
+                 ஆனால்...
+
+                 உங்கள் குடும்பம் என்னைப் பார்க்க வந்த அந்த நாள்,
+                 உங்கள் குடும்பம் என்னிடம் பேசிய விதம்,
+                 அவர்களின் அன்பு,
+                 அவர்களின் கனிவு,
+                 அவர்களின் மரியாதை...
+
+                 என் மனதில் சொல்ல முடியாத
+                 ஒரு பாசத்தையும் மதிப்பையும் விதைத்தது.
+
+                 பிறகு...
+
+                 உன்னைப் பார்க்க வரச் சொன்னபோது,
+                 எந்த எதிர்பார்ப்பும் இல்லாமல் தான் வந்தேன்.
+
+                 ஆனால் அந்த மாலை...
+
+                 மேகங்கள் வானத்தை மூடியிருந்தது,
+                 சிறு மழைத்துளிகள் பூமியைத் தொட்டுக்கொண்டிருந்தது,
+                 மின்னல் வானத்தை ஒரு கணம் ஒளிரச் செய்தது...
+
+                 அந்த நேரத்தில் தான்
+                 நீ என் முன்னால் வந்தாய்.
+
+                 உன்னைப் பார்த்த அந்த நொடி,
+                 என் மனம் ஆயிரம் வார்த்தைகள் பேச நினைத்தது,
+                 ஆனால் எந்த வார்த்தையை முதலில் சொல்ல வேண்டும் என்று தெரியவில்லை.
+
+                 நான் கேட்ட ஒரு விஷயத்திற்கு
+                 நீ சொன்ன பதில் மட்டும்...
+
+        "Alhamdulillah..."
+
+                 அந்த ஒரு வார்த்தை,
+
+        "Alhamdulillah...
+                 என் வாழ்க்கைக்கு நீ போதும்.
+        Alhamdulillah ya Allah..."
+
+                 என்று என் உள்ளம் சொல்ல வைத்தது.
+
+                 பிறகு மீண்டும் சந்தித்த போது,
+                 உன்னை கொஞ்சம் கூடுதலாகப் பார்க்கலாம் என்று நினைத்தேன்.
+
+                 ஆனால்...
+
+                 நீ உன் முகத்தை முழுவதும் மறைத்துக் கொண்டாய்.
+
+                 உன்னை முழுமையாகப் பார்க்க முடியவில்லை.
+
+                 சுற்றிலும் நிறைய பேர் இருந்தார்கள்,
+                 எனக்கும் வெட்கமாக இருந்தது.
+
+                 இருந்தாலும்...
+
+                 அந்த மறைப்பின் இடையே,
+                 உன் முகம் கொஞ்சம் கொஞ்சமாக தெரிந்த அந்த நொடிகள்,
+                 என் நினைவில் இன்னும் தெளிவாக இருக்கின்றன.
+
+                 அதனால் உன்னிடம் ஒரு சின்ன வேண்டுகோள்...
+
+                 இனிமேல் நாம் சந்திக்கும் வாய்ப்பு வந்தால்,
+
+                 ஒரு பத்து...
+                 அல்லது இருபது விநாடிகள் மட்டும்...
+
+                 நேராக என் கண்களைப் பார்த்துவிட்டு போ.
+
+                 அந்த சில விநாடிகள் போதும்,
+                 நான் நாள் முழுவதும் சிரித்துக்கொண்டே இருக்க.
+
+                 நான் ரொம்ப வெளிப்படையாக பேசுகிறேன்,
+                 இதைப் படித்து நீ என்ன நினைப்பாய் என்று தெரியவில்லை.
+
+                 ஆனால்...
+
+                 சில உணர்வுகள் மனதில் வைத்திருக்க முடியாது.
+
+                 சொல்ல வேண்டும் என்று தோன்றியது.
+
+                 அதனால் சொல்கிறேன்...
+
+                 உன்னை அறிந்த ஒவ்வொரு நொடியும்,
+                 என் மனதில் ஒரு அழகான துஆவாக மாறிக்கொண்டிருக்கிறது. ❤️
+    </p>
+  </div>
+</section>
+
+<section id="reasons">
+  <h2>🌹 Why I Love You</h2>
+
+  <div class="reasons">
+    <div class="reason">❤️ Your Smile</div>
+    <div class="reason">❤️ Your Shyness</div>
+    <div class="reason">❤️ Your Kindness</div>
+    <div class="reason">❤️ Your Deen</div>
+    <div class="reason">❤️ Your Care</div>
+    <div class="reason">❤️ Your Heart</div>
+    <div class="reason">❤️ Your Personality</div>
+    <div class="reason">❤️ Everything About You</div>
+  </div>
+</section>
+
+<section id="proposal" class="proposal">
+  <div class="card">
+    <h2>💍 One Question...</h2>
+    <br>
+    <h1>Will You Be Mine Forever? ❤️</h1>
+    <br>
+
+    <button class="btn" onclick="celebrate()">
+      YES ❤️
+    </button>
+
+    <div class="message" id="msg"></div>
+  </div>
+</section>
+
+<button class="btn music-btn" onclick="toggleMusic()">
+🎵 Music
+</button>
+
+<audio id="music" loop>
+  <source src="C:\Users\pc\Desktop\Ibu SAP Course\New folder\The-Metro-Proposal-MassTamilan.dev.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+/* LOVE TIMER */
+const startDate = new Date("2024-01-01");
+
+function updateTimer(){
+  const now = new Date();
+  const diff = now - startDate;
+ 
+   const days = Math.floor(diff/(10000*60*60*24));
+  const hours = Math.floor(diff/(1000*60*60))%24;
+  const mins = Math.floor(diff/(1000*60))%60;
+
+  document.getElementById("loveTimer").innerHTML =
+    `${days} Days ${hours} Hours ${mins} Minutes ❤️`;
+}
+setInterval(updateTimer,1000);
+updateTimer();
+
+/* FLOATING HEARTS */
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="floating-heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>heart.remove(),8000);
+},500);
+
+/* MUSIC */
+function toggleMusic(){
+  const music=document.getElementById("music");
+  if(music.paused){
+    music.play();
+  }else{
+    music.pause();
+  }
+}
+
+/* CONFETTI */
+const canvas=document.getElementById("confetti");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+}
+resize();
+window.addEventListener("resize",resize);
+
+let particles=[];
+
+function celebrate(){
+
+  document.getElementById("msg").innerHTML =
+    "Yay! ❤️ Forever Starts Today! 💕";
+
+  particles=[];
+
+  for(let i=0;i<300;i++){
+    particles.push({
+      x:Math.random()*canvas.width,
+      y:Math.random()*canvas.height-canvas.height,
+      size:Math.random()*8+4,
+      color:`hsl(${Math.random()*360},100%,50%)`,
+      speed:Math.random()*5+2
+    });
+  }
+
+  animate();
+}
+
+function animate(){
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(p=>{
+    ctx.fillStyle=p.color;
+    ctx.fillRect(p.x,p.y,p.size,p.size);
+    p.y+=p.speed;
+  });
+
+  particles=particles.filter(p=>p.y<canvas.height+20);
+
+  if(particles.length){
+    requestAnimationFrame(animate);
+  }
+}
+</script>
+
+</body>
+</html>
